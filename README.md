@@ -25,19 +25,24 @@ Per replicare l'esempio presentato è necessario:
 Creare gli account su Databricks e MongoDB Atlas.
 
 ## Configurazione di MongoDB Atlas
-Scompattare il file dataset.zip ed importare i file dataset in DBFS seguendo le istruzioni: https://docs.databricks.com/user-guide/importing-data.html
-
+- Accedere alla consolle tramite Login
+- Accedere alla sezione Network Access
+- Cliccare su ADD IP ADDRESS ed inserire: 0.0.0.0/0  in modo da permettere accesso al db da ogni indirizzo 
+- Cliccare su Cluster, poi sul bottone Connect e poi su Connect your application
+- Copiare il codice Connection String Only.
+- Nella stringa copiata sostituire i placeholder con userid e password del proprio accesso a MongoDB Atlas. La stringa occorrerà nella configurazione di Databricks.
 ## Preparazione dell'ambiente Databricks
-Importare i file SYNDOS-WRITE-TO-MONGO.ipynb e SYNDOS-TRAINING.ipynb su Databricks seguendo le istruzioni: https://docs.databricks.com/user-guide/notebooks/notebook-manage.html
-Creare un nuovo cluster seguendo le istruzioni: https://docs.databricks.com/user-guide/clusters/create.html
-Accedere alla sezione "Libraries" della configurazione del cluster ed installare il MongoDBSpark connector importanto il riferimento maven: org.mongodb.spark:mongo-spark-connector_2.11:2.4.1
+- Scompattare il file dataset.zip ed importare i file dataset in DBFS seguendo le istruzioni: https://docs.databricks.com/user-guide/importing-data.html
+- Importare i file SYNDOS-WRITE-TO-MONGO.ipynb e SYNDOS-TRAINING.ipynb su Databricks seguendo le istruzioni: https://docs.databricks.com/user-guide/notebooks/notebook-manage.html
+- Creare un nuovo cluster seguendo le istruzioni: https://docs.databricks.com/user-guide/clusters/create.html
+- Accedere alla sezione "Libraries" della configurazione del cluster ed installare il MongoDBSpark connector importanto il riferimento maven: org.mongodb.spark:mongo-spark-connector_2.11:2.4.1
 
 ### Creazione collection su MongoDB da Spark
-Aprire il Notebook SYNDOS-WRITE-TO-MONGO.ipynb e modificare la variabile MONGO_URI inserendo l'URI prelevato da MongoDB Atlas.
-Eseguire il Notebook e verificare su Atlas che la collezione sia stata correttamente creata
+- Aprire il Notebook SYNDOS-WRITE-TO-MONGO.ipynb e modificare la variabile MONGO_URI inserendo l'URI prelevato da MongoDB Atlas.
+- Eseguire il Notebook e verificare su Atlas che la collezione sia stata correttamente creata
 
 ### Training
-Aprire il Notebook SYNDOS-TRAINING.ipynb e modificare la variabile MONGO_URI inserendo l'URI prelevato da MongoDB Atlas.
-Eseguire il Notebook
+- Aprire il Notebook SYNDOS-TRAINING.ipynb e modificare la variabile MONGO_URI inserendo l'URI prelevato da MongoDB Atlas.
+- Eseguire il Notebook
 
 
