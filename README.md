@@ -1,6 +1,6 @@
 
 # Esempio di machine learnig supervisionato utilizzando MongoDB ed Apache Spark
-# L'esempio è stato presentato durante il Meetup di Deep Learning Italia del 11/11/2019 - Roma
+## L'esempio è stato presentato durante il Meetup di Deep Learning Italia del 11/11/2019 - Roma
 
 ## Author Info
 Valerio Morfino [Linkedin page](https://www.linkedin.com/in/valerio-morfino/)
