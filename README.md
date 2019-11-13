@@ -39,7 +39,7 @@ Creare gli account su Databricks e MongoDB Atlas.
 
 ### Creazione collection su MongoDB da Spark
 - Aprire il Notebook SYNDOS-WRITE-TO-MONGO.ipynb e modificare la variabile MONGO_URI inserendo l'URI prelevato da MongoDB Atlas.
-- Eseguire il Notebook e verificare su Atlas che la collezione sia stata correttamente creata
+- Eseguire il Notebook e verificare su Atlas che la collezione sia stata correttamente creata, accedendo nella consolle di Atlas alla sezione Cluster e cercando il database test 
 
 ### Training
 - Aprire il Notebook SYNDOS-TRAINING.ipynb e modificare la variabile MONGO_URI inserendo l'URI prelevato da MongoDB Atlas.
